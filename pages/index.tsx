@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-full">
+      <main className="w-full px-2">
         <Navigation />
 
         <Stopwatch />
