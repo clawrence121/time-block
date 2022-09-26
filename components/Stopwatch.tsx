@@ -31,6 +31,16 @@ export default function Stopwatch() {
     return () => clearInterval(interval);
   }, [running, startTime]);
 
+  useEffect(() => {
+    if (time <= 0) {
+      setRunning(false);
+      setTime(1800000);
+      setStartTime(null);
+
+      alert("Time is up! Great job! 🎉");
+    }
+  }, [time]);
+
   return (
     <div className="flex flex-col relative min-h-[35rem] justify-between pt-[5vh] max-w-3xl mx-auto">
       <h1 className="text-6xl text-gray-50 font-semibold flex gap-4">
